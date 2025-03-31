@@ -20,7 +20,7 @@ void send_command(const char *command) {
         return;
     }
 
-    char response[100] = {0};
+    char response[256] = {0};
     read(fd, response, sizeof(response));
     printf("%s", response);
     close(fd);
